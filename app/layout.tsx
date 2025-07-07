@@ -4,6 +4,7 @@ import "./globals.css";
 import { SideBar } from "./_components/SideBar";
 import { TopNavBar } from "./_components/TopNavBar";
 import { BottomNavBar } from "./_components/BottomNavBar";
+import { Analytics } from '@vercel/analytics/next';
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({ children,}: Readonly<{ children: React.Reac
          <SideBar />
         {children}
         <BottomNavBar />
+        <Analytics />
       </body>
     </html>
   );
